@@ -18,8 +18,8 @@ function SignupScreen() {
       authCtx.authenticate(token);
     } catch (error) {
       Alert.alert("Sign in failed", "There was an error signing you in");
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
